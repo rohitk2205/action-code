@@ -1,9 +1,7 @@
 # This is a basic workflow to help you get started with Actions
 
-# name is an inbuilt identifier to name your workflow
-name: first workflow for action-code repo
+name: second workflow for action-code repo
 
-# on is an inbuilt identifier. 
 # It will trigger the workflow. workflow_dispatch will trigger workflow manually from Github Action UI
 on: workflow_dispatch
 
@@ -14,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps: # define steps that will run on the runner. 
       - name: welcome message # give a name to the first step
-        run: echo "welcome to the first ever step, job, workflow written by you!"
+        run: |
+            echo "welcome to the first ever step, job, workflow written by you!"
+            echo " This is a test of pipe symbol to add multiple run lines"
       - name: leave message # name for another step
-        run: echo "my work is done here!"
+        run: |
+            echo "my work is done here!"
+            echo "i am leaving this workflow"
